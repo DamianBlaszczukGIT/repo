@@ -24,30 +24,35 @@ software system. The definition of the TIOBE index can be found here.
 - **Change**: +8.22%
 - **Info**:
   - [More Info](./Python.md)
+
 ### C++
 ![Image](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/C__.png)
 - **Usage**: 11.08%
 - **Change**: +0.37%
 - **Info**:
   - [More Info](./C++.md)
+
 ### Java
 ![Image](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/Java.png)
 - **Usage**: 10.36%
 - **Change**: +1.41%
 - **Info**:
   - [More Info](./Java.md)
+
 ### C
 ![Image](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/C.png)
 - **Usage**: 9.53%
 - **Change**: -1.64%
 - **Info**:
   - [More Info](./C.md)
+
 ### C#
 ![Image](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/C_.png)
 - **Usage**: 4.87%
 - **Change**: -2.67%
 - **Info**:
   - [More Info](./C#.md)
+
 ### JavaScript
 ![Image](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/JavaScript.png)
 - **Usage**: 3.46%
