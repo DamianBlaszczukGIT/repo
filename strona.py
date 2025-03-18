@@ -71,7 +71,7 @@ for item in data:
     subpage_content += f"# {item['name']}\n"
     subpage_content += f"- **Info**:\n"
     for result in item['info']:
-        subpage_content += result + '\n'
+        subpage_content += result
     
     with open(f"{item['name'].replace(' ', '_')}.md", 'w', encoding='utf-8') as subfile:
         subfile.write(subpage_content)
