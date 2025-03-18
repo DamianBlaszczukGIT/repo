@@ -14,7 +14,7 @@ import org.jsoup.nodes.Element;
 public class WikipediaSummarizer {
     public static void main(String[] args) {
         try {
-            String url = "https://en.wikipedia.org/wiki/Java_(programming_language)";
+            String url = "https://en.wikipedia.org/wiki/Your_Page_Title"; // Replace with the desired Wikipedia page
             Document doc = Jsoup.connect(url).get();
             Element summary = doc.select("p").first(); // Get the first paragraph
             System.out.println(summary.text());
@@ -25,4 +25,4 @@ public class WikipediaSummarizer {
 }
 ```
 
-This code fetches the Java programming language Wikipedia page and prints the first paragraph as a summary. You can modify the selector to get more specific content as needed.
+This code fetches the specified Wikipedia page and prints the first paragraph, which often serves as a summary. Adjust the selector as needed to capture more content.

@@ -73,7 +73,8 @@ for item in data:
     for result in item['info']:
         subpage_content += result
     
-    with open(f"{item['name'].replace(' ', '_')}.md", 'w', encoding='utf-8') as subfile:
+    safe_name = f"{item['name'].replace(' ', '_').replace('/', '_')}.md"
+    with open(safe_name, 'w', encoding='utf-8') as subfile:
         subfile.write(subpage_content)
 
 main_content = f"---\n"
