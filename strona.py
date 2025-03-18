@@ -6,10 +6,15 @@ import time
 from markdownify import markdownify as md
 
 def fetch_info(query):
-    time.sleep(5)
-    site_query = f"{query} site:wikipedia.org"
-    results = DDGS().text(site_query, max_results=1)
-    return results
+    #time.sleep(5)
+    #site_query = f"{query} site:wikipedia.org"
+    site_query = f"{query} summarize wikipedia page, write your answear in plain text. Keep your answear short and concise."
+    try:
+        results = DDGS().chat(site_query)
+        #print(results)
+        return results.strip()
+    except:
+        return "No results found"
 
 url = 'https://www.tiobe.com/tiobe-index/'
 
@@ -60,14 +65,13 @@ for item in data:
     content += f"- **Info**:\n"
     content += f"  - [More Info](./{item['name'].replace(' ', '_')}.md)\n"
     
-    # Create a subpage for each item with only the "Info" section
     subpage_content = f"---\n"
     subpage_content += f"title: {item['name']}\n"
     subpage_content += f"---\n\n"
     subpage_content += f"# {item['name']}\n"
     subpage_content += f"- **Info**:\n"
     for result in item['info']:
-        subpage_content += f"  - [{result['title']}]({result['href']}): {md(result['body'])}\n"
+        subpage_content += result + '\n'
     
     with open(f"{item['name'].replace(' ', '_')}.md", 'w', encoding='utf-8') as subfile:
         subfile.write(subpage_content)
@@ -87,7 +91,7 @@ for item in data:
     main_content += f"- **Info**:\n"
     main_content += f"  - [More Info](./{item['name'].replace(' ', '_')}.md)\n"
 
-with open('tiobe.md', 'w', encoding='utf-8') as file:
+with open('index.markdown', 'w', encoding='utf-8') as file:
     file.write(main_content)
 
 print('Done!')
